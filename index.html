@@ -3,66 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <title>Adly Naufal Afdhala Dalimunthe</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Icons from Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+
+    body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: white;
+      text-align: center;
       background: url('background.jpg') no-repeat center center fixed;
       background-size: cover;
       height: 100vh;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
+      padding: 20px;
     }
 
     h1 {
       font-size: 2.5rem;
       margin-bottom: 30px;
-      color: #ffffff;
-      text-shadow: 1px 1px 5px #00000099;
+      color: #fff;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
     }
 
-    .button-container {
+    .button-group {
       display: flex;
-      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
     }
 
     .btn {
+      background-color: rgba(40, 167, 69, 0.9);
+      padding: 12px 24px;
+      border: none;
+      border-radius: 12px;
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
       display: flex;
       align-items: center;
       gap: 8px;
-      text-decoration: none;
-      background-color: #28a745;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 12px;
-      font-size: 1rem;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-      transition: background-color 0.3s, transform 0.2s;
     }
 
     .btn:hover {
-      background-color: #218838;
-      transform: translateY(-2px);
+      background-color: rgba(33, 136, 56, 0.9);
     }
 
     .btn i {
       font-size: 1.2rem;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+      }
+
+      .btn {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+      }
+
+      .btn i {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
   <h1>Adly Naufal Afdhala Dalimunthe</h1>
 
-  <div class="button-container">
+  <div class="button-group">
+    <!-- Email Button -->
     <a href="mailto:dhala.dalimunthe@gmail.com" class="btn">
-      <i class="fas fa-envelope"></i> Email
+      <i class="fas fa-envelope"></i>Email
     </a>
+
+    <!-- LinkedIn Button -->
     <a href="https://www.linkedin.com/in/adly-naufal-afdhala-dalimunthe-990545261/" target="_blank" class="btn">
-      <i class="fab fa-linkedin"></i> LinkedIn
+      <i class="fab fa-linkedin"></i>LinkedIn
+    </a>
+
+    <!-- Request CV Button -->
+    <a href="mailto:dhala.dalimunthe@gmail.com?subject=Requesting%20Your%20CV&body=Hi%20Adly,%0AI%20would%20like%20to%20request%20a%20copy%20of%20your%20CV.%0AThank%20you!" class="btn">
+      <i class="fas fa-file-alt"></i>Request CV
+    </a>
+
+    <!-- Instagram Button -->
+    <a href="https://www.instagram.com/yourusername/" target="_blank" class="btn">
+      <i class="fab fa-instagram"></i>Instagram
     </a>
   </div>
 </body>
