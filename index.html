@@ -3,18 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <title>Adly Naufal Afdhala Dalimunthe</title>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XZ2BZ8TLF6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-XZ2BZ8TLF6');
-</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XZ2BZ8TLF6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XZ2BZ8TLF6');
+  </script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
   <style>
     * {
       box-sizing: border-box;
@@ -66,6 +69,14 @@
 
     .icon-btn:hover {
       background-color: rgba(33, 136, 56, 0.9);
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 20px;
+      flex-wrap: wrap;
     }
 
     .cv-btn {
@@ -136,9 +147,14 @@
     </a>
   </div>
 
-  <a href="mailto:dhala.dalimunthe@gmail.com?subject=Requesting%20Your%20CV&body=Hi%20Adly,%0AI%20would%20like%20to%20request%20a%20copy%20of%20your%20CV.%0AThank%20you!" class="cv-btn">
-    Request CV
-  </a>
+  <div class="button-group">
+    <a href="mailto:dhala.dalimunthe@gmail.com?subject=Requesting%20Your%20CV&body=Hi%20Adly,%0AI%20would%20like%20to%20request%20a%20copy%20of%20your%20CV.%0AThank%20you!" class="cv-btn">
+      Request CV
+    </a>
+    <a href="portfolio.html" class="cv-btn">
+      View Portfolio
+    </a>
+  </div>
 
   <a href="https://www.instagram.com/Adly_N_A/" class="instagram-btn" target="_blank" title="Instagram">
     <i class="fab fa-instagram"></i>
