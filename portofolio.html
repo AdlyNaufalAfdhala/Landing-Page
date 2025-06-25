@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adly Naufal – Portfolio</title>
+
+  <style>
+    :root {
+      --bg-dark: rgba(0, 0, 0, 0.6);
+      --bg-light: rgba(255, 255, 255, 0.9);
+      --text-dark: #fff;
+      --text-light: #111;
+      --highlight: #66ffcc;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('assets/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      padding: 30px 20px;
+      animation: fadeIn 1.2s ease-in;
+      color: var(--text-dark);
+    }
+
+    .light-mode {
+      color: var(--text-light);
+      background: #f0f0f0;
+      background-image: none;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2.5rem;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
+    }
+
+    .intro, .section {
+      max-width: 900px;
+      margin: 0 auto 40px;
+      background-color: var(--bg-dark);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      animation: slideUp 1.2s ease-in-out;
+    }
+
+    .light-mode .intro, .light-mode .section {
+      background-color: var(--bg-light);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .intro p, .section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+      color: var(--highlight);
+    }
+
+    .section img, iframe {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+      transition: transform 0.4s ease;
+    }
+
+    .section img:hover {
+      transform: scale(1.03);
+    }
+
+    .publication-list a {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--highlight);
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .publication-list a:hover {
+      text-decoration: underline;
+    }
+
+    .back-btn, .toggle-btn {
+      display: inline-block;
+      margin: 30px auto 10px;
+      text-align: center;
+      background-color: rgba(40, 167, 69, 0.9);
+      color: white;
+      padding: 10px 24px;
+      font-size: 1rem;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-btn:hover, .toggle-btn:hover {
+      background-color: rgba(33, 136, 56, 0.9);
+    }
+
+    .toggle-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 100;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 2rem; }
+      .section h2 { font-size: 1.25rem; }
+      iframe { height: 400px; }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="toggle-btn" onclick="toggleTheme()">Toggle Theme</button>
+
+  <h1>Welcome to My Portfolio</h1>
+
+  <div class="intro">
+    <p>
+      I’m Adly Naufal Afdhala Dalimunthe, a recent law graduate from Universitas Muhammadiyah Yogyakarta with experience in legal research, document handling, and academic support. My interests lie in the intersection between law, human resources, and compliance. I’ve supported legal instruction at the university level, contributed to publications, and produced visual content for recruitment and internal communication.
+    </p>
+  </div>
+
+  <div class="portfolio-container">
+
+    <div class="section">
+      <h2>📜 HRM Certificate</h2>
+      <p>
+        Completed a certified course in Human Resource Management from IIENSTITU, covering recruitment, employee lifecycle, and organizational structure.
+      </p>
+      <iframe src="assets/Certificate.pdf" height="600px"></iframe>
+    </div>
+
+    <div class="section">
+      <h2>🎨 Design Example</h2>
+      <p>
+        This Canva-based recruitment poster was created as part of my contribution to student organizational events and volunteer coordination.
+      </p>
+      <img src="assets/design example.jpg" alt="Design Example" />
+    </div>
+
+    <div class="section">
+      <h2>📚 Publications</h2>
+      <p>Here are a few academic works I’ve contributed to:</p>
+      <div class="publication-list">
+        <a href="https://www.researchgate.net/publication/357554498_Discrimination_against_indigenous_people_in_Australia" target="_blank">
+          • Discrimination Against Indigenous People in Australia
+        </a>
+        <a href="https://www.researchgate.net/publication/348735759_Philippine_Narcotics_War_Crimes_Withdrawal_Of_The_Philippine_From_The_International_Criminal_Court_Under_The_Rome_Statute" target="_blank">
+          • Philippine Narcotics War Crimes & Withdrawal from the ICC
+        </a>
+        <a href="https://www.researchgate.net/publication/348736241_The_impact_of_the_implementation_of_RI-swiss_mutual_legal_assistance_for_both_countries" target="_blank">
+          • RI–Swiss Mutual Legal Assistance Implementation Impact
+        </a>
+        <a href="https://www.researchgate.net/publication/333803356_Illegal_fishing_within_Indonesia_territory" target="_blank">
+          • Illegal Fishing Within Indonesia Territory
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <a href="index.html" class="back-btn">← Back to Home</a>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle("light-mode");
+    }
+  </script>
+</body>
+</html>
